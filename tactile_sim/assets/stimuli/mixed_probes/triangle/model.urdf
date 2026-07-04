@@ -1,0 +1,22 @@
+<robot name="triangle">
+	<link name="_name">
+		<visual>
+			<origin rpy="0 0 0" xyz="-9.615176613367952e-06 -3.8136830959764256e-05 -0.006005232842401958" />
+			<geometry>
+				<mesh filename="triangle.obj" scale=".001 .001 .001" />
+			</geometry>
+			<material name="texture">
+				<color rgba="1.0 1.0 1.0 1.0" />
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<mesh filename="triangle_vhacd.obj" scale=".001 .001 .001" />
+			</geometry>
+		<origin rpy="0 0 0" xyz="-9.615176613367952e-06 -3.8136830959764256e-05 -0.006005232842401958" /></collision>
+		<inertial>
+			<mass value="1.0" />
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+		</inertial>
+	</link>
+</robot>

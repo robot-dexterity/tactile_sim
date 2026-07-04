@@ -1,0 +1,22 @@
+<robot name="moon">
+	<link name="_name">
+		<visual>
+			<origin rpy="0 0 0" xyz="0.00012687035372052345 3.8308902262742253e-19 -0.00640090082975166" />
+			<geometry>
+				<mesh filename="moon.obj" scale=".001 .001 .001" />
+			</geometry>
+			<material name="texture">
+				<color rgba="1.0 1.0 1.0 1.0" />
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<mesh filename="moon_vhacd.obj" scale=".001 .001 .001" />
+			</geometry>
+		<origin rpy="0 0 0" xyz="0.00012687035372052345 3.8308902262742253e-19 -0.00640090082975166" /></collision>
+		<inertial>
+			<mass value="1.0" />
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+		</inertial>
+	</link>
+</robot>

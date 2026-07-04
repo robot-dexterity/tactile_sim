@@ -1,0 +1,22 @@
+<robot name="sphere">
+	<link name="_name">
+		<visual>
+			<origin rpy="0 0 0" xyz="-9.445153239905e-09 1.3923445176319547e-11 -0.0062339254108575584" />
+			<geometry>
+				<mesh filename="sphere.obj" scale=".001 .001 .001" />
+			</geometry>
+			<material name="texture">
+				<color rgba="1.0 1.0 1.0 1.0" />
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<mesh filename="sphere_vhacd.obj" scale=".001 .001 .001" />
+			</geometry>
+		<origin rpy="0 0 0" xyz="-9.445153239905e-09 1.3923445176319547e-11 -0.0062339254108575584" /></collision>
+		<inertial>
+			<mass value="1.0" />
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+		</inertial>
+	</link>
+</robot>

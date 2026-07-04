@@ -1,0 +1,22 @@
+<robot name="curved_surface">
+	<link name="_name">
+		<visual>
+			<origin rpy="0 0 0" xyz="8.772591790506957e-08 -1.2084370468973417e-10 -0.009503669569586285" />
+			<geometry>
+				<mesh filename="curved_surface.obj" scale=".001 .001 .001" />
+			</geometry>
+			<material name="texture">
+				<color rgba="1.0 1.0 1.0 1.0" />
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<mesh filename="curved_surface_vhacd.obj" scale=".001 .001 .001" />
+			</geometry>
+		<origin rpy="0 0 0" xyz="8.772591790506957e-08 -1.2084370468973417e-10 -0.009503669569586285" /></collision>
+		<inertial>
+			<mass value="1.0" />
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+		</inertial>
+	</link>
+</robot>

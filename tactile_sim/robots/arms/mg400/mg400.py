@@ -51,6 +51,34 @@ class MG400(BaseRobotArm):
         self.control_joint_ids = [self.joint_name_to_index[name] for name in self.control_joint_names]
         self.num_control_dofs = len(self.control_joint_ids)
 
+    def _logical_to_control_joint_angles(self, joint_angles):
+        """
+        Expand the MG400's 4 logical joints to the coupled PyBullet joints.
+        """
+        joint_angles = np.array(joint_angles, dtype=float).ravel()
+
+        if len(joint_angles) == self.num_control_dofs:
+            return joint_angles
+        if len(joint_angles) != 4:
+            raise ValueError(f"MG400 expects 4 or {self.num_control_dofs} joint angles")
+
+        control_joint_angles = super().get_joint_angles()
+        control_joint_angles[:4] = joint_angles
+        control_joint_angles[5] = joint_angles[1]
+        control_joint_angles[6] = -joint_angles[1]
+        control_joint_angles[7] = joint_angles[1] + joint_angles[2]
+        return control_joint_angles
+
+    def get_joint_angles(self):
+        """
+        Return the MG400's 4 logical joints, matching the real robot interface.
+        """
+        return super().get_joint_angles()[:4]
+
+    def move_joints(self, targ_joint_angles, quick_mode=False):
+        targ_joint_angles = self._logical_to_control_joint_angles(targ_joint_angles)
+        super().move_joints(targ_joint_angles, quick_mode=quick_mode)
+
     def tcp_velocity_control(self, desired_vels):
         """
         Actions specifiy desired velocities in the workframe.
