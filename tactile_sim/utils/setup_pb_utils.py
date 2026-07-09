@@ -81,7 +81,7 @@ def load_standard_environment(pb):
     )
 
 
-def load_stim(pb, stim_name, stim_pose, fixed_base=False, scale=1.0):
+def load_stim(pb, stim_name, stim_pose, fixed_base=False, enable_collision=True, scale=1.0):
     """
     Load a stimulus at a given pose.
     """
@@ -96,9 +96,11 @@ def load_stim(pb, stim_name, stim_pose, fixed_base=False, scale=1.0):
         globalScaling=scale
     )
 
-    # turn off collision when stim is fixed - not needed in static env
-    if fixed_base:
+    if not enable_collision:
         pb.setCollisionFilterGroupMask(stim_id, -1, 0, 0)
+
+    if not fixed_base:
+        p.changeDynamics(stim_id, -1, mass=0.05)
 
     return stim_id
 

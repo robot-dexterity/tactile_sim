@@ -1,0 +1,22 @@
+<robot name="torus">
+	<link name="_name">
+		<visual>
+			<origin rpy="0 0 0" xyz="-7.195103610549192e-09 5.2282604385410604e-08 -0.006678547679889386" />
+			<geometry>
+				<mesh filename="torus.obj" scale=".001 .001 .001" />
+			</geometry>
+			<material name="texture">
+				<color rgba="1.0 1.0 1.0 1.0" />
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<mesh filename="torus_vhacd.obj" scale=".001 .001 .001" />
+			</geometry>
+		<origin rpy="0 0 0" xyz="-7.195103610549192e-09 5.2282604385410604e-08 -0.006678547679889386" /></collision>
+		<inertial>
+			<mass value="1.0" />
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+		</inertial>
+	</link>
+</robot>

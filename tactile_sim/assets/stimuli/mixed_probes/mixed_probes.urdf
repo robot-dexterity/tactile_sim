@@ -1,0 +1,602 @@
+<?xml version="1.0" ?>
+<robot name="all_stim">
+
+  <link name="world"/>
+
+<!-- Row 1 -->
+
+	<link name="cone">
+		<visual>
+			<origin rpy="0 0 0" xyz="-0.025 -0.075 0.0" />
+			<geometry>
+				<mesh filename="cone/cone.obj" scale=".001 .001 .001" />
+			</geometry>
+			<material name="texture">
+				<color rgba="1.0 1.0 1.0 1.0" />
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<mesh filename="cone/cone_vhacd.obj" scale=".001 .001 .001" />
+			</geometry>
+		<origin rpy="0 0 0" xyz="-0.025 -0.075 0.0" /></collision>
+		<inertial>
+			<mass value="1.0" />
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+		</inertial>
+	</link>
+
+  <joint name="cone_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="world"/>
+    <child link="cone"/>
+  </joint>
+
+
+  <link name="cross_lines">
+		<visual>
+			<origin rpy="0 0 0" xyz="-0.025 -0.05 0.0" />
+			<geometry>
+				<mesh filename="cross_lines/cross_lines.obj" scale=".001 .001 .001" />
+			</geometry>
+			<material name="texture">
+				<color rgba="1.0 1.0 1.0 1.0" />
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<mesh filename="cross_lines/cross_lines_vhacd.obj" scale=".001 .001 .001" />
+			</geometry>
+		<origin rpy="0 0 0" xyz="-0.025 -0.05 0.0" />
+    </collision>
+		<inertial>
+			<mass value="1.0" />
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+		</inertial>
+	</link>
+
+  <joint name="cross_lines_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="world"/>
+    <child link="cross_lines"/>
+  </joint>
+
+
+  <link name="curved_surface">
+		<visual>
+			<origin rpy="0 0 0" xyz="-0.025 -0.025 0.0" />
+			<geometry>
+				<mesh filename="curved_surface/curved_surface.obj" scale=".001 .001 .001" />
+			</geometry>
+			<material name="texture">
+				<color rgba="1.0 1.0 1.0 1.0" />
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<mesh filename="curved_surface/curved_surface_vhacd.obj" scale=".001 .001 .001" />
+			</geometry>
+		<origin rpy="0 0 0" xyz="-0.025 -0.025 0.0" />
+    </collision>
+		<inertial>
+			<mass value="1.0" />
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+		</inertial>
+	</link>
+
+  <joint name="curved_surface_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="world"/>
+    <child link="curved_surface"/>
+  </joint>
+
+  <link name="cylinder">
+		<visual>
+			<origin rpy="0 0 0" xyz="-0.025 0.0 0.0" />
+			<geometry>
+				<mesh filename="cylinder/cylinder.obj" scale=".001 .001 .001" />
+			</geometry>
+			<material name="texture">
+				<color rgba="1.0 1.0 1.0 1.0" />
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<mesh filename="cylinder/cylinder_vhacd.obj" scale=".001 .001 .001" />
+			</geometry>
+		<origin rpy="0 0 0" xyz="-0.025 0.0 0.0" />
+    </collision>
+		<inertial>
+			<mass value="1.0" />
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+		</inertial>
+	</link>
+
+  <joint name="cylinder_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="world"/>
+    <child link="cylinder"/>
+  </joint>
+
+  <link name="cylinder_shell">
+		<visual>
+			<origin rpy="0 0 0" xyz="-0.025 0.025 0.0" />
+			<geometry>
+				<mesh filename="cylinder_shell/cylinder_shell.obj" scale=".001 .001 .001" />
+			</geometry>
+			<material name="texture">
+				<color rgba="1.0 1.0 1.0 1.0" />
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<mesh filename="cylinder_shell/cylinder_shell_vhacd.obj" scale=".001 .001 .001" />
+			</geometry>
+		<origin rpy="0 0 0" xyz="-0.025 0.025 0.0" />
+    </collision>
+		<inertial>
+			<mass value="1.0" />
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+		</inertial>
+	</link>
+
+  <joint name="cylinder_shell_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="world"/>
+    <child link="cylinder_shell"/>
+  </joint>
+
+  <link name="cylinder_side">
+		<visual>
+			<origin rpy="0 0 0" xyz="-0.025 0.05 0.0" />
+			<geometry>
+				<mesh filename="cylinder_side/cylinder_side.obj" scale=".001 .001 .001" />
+			</geometry>
+			<material name="texture">
+				<color rgba="1.0 1.0 1.0 1.0" />
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<mesh filename="cylinder_side/cylinder_side_vhacd.obj" scale=".001 .001 .001" />
+			</geometry>
+		<origin rpy="0 0 0" xyz="-0.025 0.05 0.0" />
+    </collision>
+		<inertial>
+			<mass value="1.0" />
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+		</inertial>
+	</link>
+
+  <joint name="cylinder_side_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="world"/>
+    <child link="cylinder_side"/>
+  </joint>
+
+  <link name="dot_in">
+		<visual>
+			<origin rpy="0 0 0" xyz="-0.025 0.075 0.0" />
+			<geometry>
+				<mesh filename="dot_in/dot_in.obj" scale=".001 .001 .001" />
+			</geometry>
+			<material name="texture">
+				<color rgba="1.0 1.0 1.0 1.0" />
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<mesh filename="dot_in/dot_in_vhacd.obj" scale=".001 .001 .001" />
+			</geometry>
+		<origin rpy="0 0 0" xyz="-0.025 0.075 0.0" />
+    </collision>
+		<inertial>
+			<mass value="1.0" />
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+		</inertial>
+	</link>
+
+  <joint name="dot_in_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="world"/>
+    <child link="dot_in"/>
+  </joint>
+
+<!-- ROW 2 -->
+
+  <link name="dots">
+		<visual>
+			<origin rpy="0 0 0" xyz="0.0 -0.075 0.0" />
+			<geometry>
+				<mesh filename="dots/dots.obj" scale=".001 .001 .001" />
+			</geometry>
+			<material name="texture">
+				<color rgba="1.0 1.0 1.0 1.0" />
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<mesh filename="dots/dots_vhacd.obj" scale=".001 .001 .001" />
+			</geometry>
+		<origin rpy="0 0 0" xyz="0.0 -0.075 0.0" />
+    </collision>
+		<inertial>
+			<mass value="1.0" />
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+		</inertial>
+	</link>
+
+  <joint name="dots_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="world"/>
+    <child link="dots"/>
+  </joint>
+
+  <link name="flat_slab">
+		<visual>
+			<origin rpy="0 0 0" xyz="0.0 -0.05 0.0" />
+			<geometry>
+				<mesh filename="flat_slab/flat_slab.obj" scale=".001 .001 .001" />
+			</geometry>
+			<material name="texture">
+				<color rgba="1.0 1.0 1.0 1.0" />
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<mesh filename="flat_slab/flat_slab_vhacd.obj" scale=".001 .001 .001" />
+			</geometry>
+		<origin rpy="0 0 0" xyz="0.0 -0.05 0.0" />
+    </collision>
+		<inertial>
+			<mass value="1.0" />
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+		</inertial>
+	</link>
+
+  <joint name="flat_slab_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="world"/>
+    <child link="flat_slab"/>
+  </joint>
+
+  <link name="hexagon">
+		<visual>
+			<origin rpy="0 0 0" xyz="0.0 -0.025 0.0" />
+			<geometry>
+				<mesh filename="hexagon/hexagon.obj" scale=".001 .001 .001" />
+			</geometry>
+			<material name="texture">
+				<color rgba="1.0 1.0 1.0 1.0" />
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<mesh filename="hexagon/hexagon_vhacd.obj" scale=".001 .001 .001" />
+			</geometry>
+		<origin rpy="0 0 0" xyz="0.0 -0.025 0.0" />
+    </collision>
+		<inertial>
+			<mass value="1.0" />
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+		</inertial>
+	</link>
+
+  <joint name="hexagon_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="world"/>
+    <child link="hexagon"/>
+  </joint>
+
+  <link name="line">
+		<visual>
+			<origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+			<geometry>
+				<mesh filename="line/line.obj" scale=".001 .001 .001" />
+			</geometry>
+			<material name="texture">
+				<color rgba="1.0 1.0 1.0 1.0" />
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<mesh filename="line/line_vhacd.obj" scale=".001 .001 .001" />
+			</geometry>
+		<origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+    </collision>
+		<inertial>
+			<mass value="1.0" />
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+		</inertial>
+	</link>
+
+  <joint name="line_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="world"/>
+    <child link="line"/>
+  </joint>
+
+  <link name="moon">
+		<visual>
+			<origin rpy="0 0 0" xyz="0.0 0.025 0.0" />
+			<geometry>
+				<mesh filename="moon/moon.obj" scale=".001 .001 .001" />
+			</geometry>
+			<material name="texture">
+				<color rgba="1.0 1.0 1.0 1.0" />
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<mesh filename="moon/moon_vhacd.obj" scale=".001 .001 .001" />
+			</geometry>
+		<origin rpy="0 0 0" xyz="0.0 0.025 0.0" />
+    </collision>
+		<inertial>
+			<mass value="1.0" />
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+		</inertial>
+	</link>
+
+  <joint name="moon_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="world"/>
+    <child link="moon"/>
+  </joint>
+
+  <link name="pacman">
+		<visual>
+			<origin rpy="0 0 0" xyz="0.0 0.05 0.0" />
+			<geometry>
+				<mesh filename="pacman/pacman.obj" scale=".001 .001 .001" />
+			</geometry>
+			<material name="texture">
+				<color rgba="1.0 1.0 1.0 1.0" />
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<mesh filename="pacman/pacman_vhacd.obj" scale=".001 .001 .001" />
+			</geometry>
+		<origin rpy="0 0 0" xyz="0.0 0.05 0.0" />
+    </collision>
+		<inertial>
+			<mass value="1.0" />
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+		</inertial>
+	</link>
+
+  <joint name="pacman_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="world"/>
+    <child link="pacman"/>
+  </joint>
+
+  <link name="parallel_lines">
+		<visual>
+			<origin rpy="0 0 0" xyz="0.0 0.075 0.0" />
+			<geometry>
+				<mesh filename="parallel_lines/parallel_lines.obj" scale=".001 .001 .001" />
+			</geometry>
+			<material name="texture">
+				<color rgba="1.0 1.0 1.0 1.0" />
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<mesh filename="parallel_lines/parallel_lines_vhacd.obj" scale=".001 .001 .001" />
+			</geometry>
+		<origin rpy="0 0 0" xyz="0.0 0.075 0.0" />
+    </collision>
+		<inertial>
+			<mass value="1.0" />
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+		</inertial>
+	</link>
+
+  <joint name="parallel_lines_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="world"/>
+    <child link="parallel_lines"/>
+  </joint>
+
+<!-- ROW 3 -->
+
+    <link name="prism">
+  		<visual>
+  			<origin rpy="0 0 0" xyz="0.025 -0.075 0.0" />
+  			<geometry>
+  				<mesh filename="prism/prism.obj" scale=".001 .001 .001" />
+  			</geometry>
+  			<material name="texture">
+  				<color rgba="1.0 1.0 1.0 1.0" />
+  			</material>
+  		</visual>
+  		<collision>
+  			<geometry>
+  				<mesh filename="prism/prism_vhacd.obj" scale=".001 .001 .001" />
+  			</geometry>
+  		<origin rpy="0 0 0" xyz="0.025 -0.075 0.0" />
+      </collision>
+  		<inertial>
+  			<mass value="1.0" />
+  			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+  		</inertial>
+  	</link>
+
+    <joint name="prism_joint" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <parent link="world"/>
+      <child link="prism"/>
+    </joint>
+
+    <link name="random">
+  		<visual>
+  			<origin rpy="0 0 0" xyz="0.025 -0.05 0.0" />
+  			<geometry>
+  				<mesh filename="random/random.obj" scale=".001 .001 .001" />
+  			</geometry>
+  			<material name="texture">
+  				<color rgba="1.0 1.0 1.0 1.0" />
+  			</material>
+  		</visual>
+  		<collision>
+  			<geometry>
+  				<mesh filename="random/random_vhacd.obj" scale=".001 .001 .001" />
+  			</geometry>
+  		<origin rpy="0 0 0" xyz="0.025 -0.05 0.0" />
+      </collision>
+  		<inertial>
+  			<mass value="1.0" />
+  			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+  		</inertial>
+  	</link>
+
+    <joint name="random_joint" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <parent link="world"/>
+      <child link="random"/>
+    </joint>
+
+    <link name="sphere">
+  		<visual>
+  			<origin rpy="0 0 0" xyz="0.025 -0.025 0.0" />
+  			<geometry>
+  				<mesh filename="sphere/sphere.obj" scale=".001 .001 .001" />
+  			</geometry>
+  			<material name="texture">
+  				<color rgba="1.0 1.0 1.0 1.0" />
+  			</material>
+  		</visual>
+  		<collision>
+  			<geometry>
+  				<mesh filename="sphere/sphere_vhacd.obj" scale=".001 .001 .001" />
+  			</geometry>
+  		<origin rpy="0 0 0" xyz="0.025 -0.025 0.0" />
+      </collision>
+  		<inertial>
+  			<mass value="1.0" />
+  			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+  		</inertial>
+  	</link>
+
+    <joint name="sphere_joint" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <parent link="world"/>
+      <child link="sphere"/>
+    </joint>
+
+    <link name="sphere2">
+  		<visual>
+  			<origin rpy="0 0 0" xyz="0.025 0.0 0.0" />
+  			<geometry>
+  				<mesh filename="sphere2/sphere2.obj" scale=".001 .001 .001" />
+  			</geometry>
+  			<material name="texture">
+  				<color rgba="1.0 1.0 1.0 1.0" />
+  			</material>
+  		</visual>
+  		<collision>
+  			<geometry>
+  				<mesh filename="sphere2/sphere2_vhacd.obj" scale=".001 .001 .001" />
+  			</geometry>
+  		<origin rpy="0 0 0" xyz="0.025 0.0 0.0" />
+      </collision>
+  		<inertial>
+  			<mass value="1.0" />
+  			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+  		</inertial>
+  	</link>
+
+    <joint name="sphere2_joint" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <parent link="world"/>
+      <child link="sphere2"/>
+    </joint>
+
+    <link name="torus">
+  		<visual>
+  			<origin rpy="0 0 0" xyz="0.025 0.025 0.0" />
+  			<geometry>
+  				<mesh filename="torus/torus.obj" scale=".001 .001 .001" />
+  			</geometry>
+  			<material name="texture">
+  				<color rgba="1.0 1.0 1.0 1.0" />
+  			</material>
+  		</visual>
+  		<collision>
+  			<geometry>
+  				<mesh filename="torus/torus_vhacd.obj" scale=".001 .001 .001" />
+  			</geometry>
+  		<origin rpy="0 0 0" xyz="0.025 0.025 0.0" />
+      </collision>
+  		<inertial>
+  			<mass value="1.0" />
+  			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+  		</inertial>
+  	</link>
+
+    <joint name="torus_joint" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <parent link="world"/>
+      <child link="torus"/>
+    </joint>
+
+    <link name="triangle">
+  		<visual>
+  			<origin rpy="0 0 0" xyz="0.025 0.05 0.0" />
+  			<geometry>
+  				<mesh filename="triangle/triangle.obj" scale=".001 .001 .001" />
+  			</geometry>
+  			<material name="texture">
+  				<color rgba="1.0 1.0 1.0 1.0" />
+  			</material>
+  		</visual>
+  		<collision>
+  			<geometry>
+  				<mesh filename="triangle/triangle_vhacd.obj" scale=".001 .001 .001" />
+  			</geometry>
+  		<origin rpy="0 0 0" xyz="0.025 0.05 0.0" />
+      </collision>
+  		<inertial>
+  			<mass value="1.0" />
+  			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+  		</inertial>
+  	</link>
+
+    <joint name="triangle_joint" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <parent link="world"/>
+      <child link="triangle"/>
+    </joint>
+
+    <link name="wave1">
+  		<visual>
+  			<origin rpy="0 0 0" xyz="0.025 0.075 0.0" />
+  			<geometry>
+  				<mesh filename="wave1/wave1.obj" scale=".001 .001 .001" />
+  			</geometry>
+  			<material name="texture">
+  				<color rgba="1.0 1.0 1.0 1.0" />
+  			</material>
+  		</visual>
+  		<collision>
+  			<geometry>
+  				<mesh filename="wave1/wave1_vhacd.obj" scale=".001 .001 .001" />
+  			</geometry>
+  		<origin rpy="0 0 0" xyz="0.025 0.075 0.0" />
+      </collision>
+  		<inertial>
+  			<mass value="1.0" />
+  			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+  		</inertial>
+  	</link>
+
+    <joint name="wave1_joint" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <parent link="world"/>
+      <child link="wave1"/>
+    </joint>
+
+
+</robot>

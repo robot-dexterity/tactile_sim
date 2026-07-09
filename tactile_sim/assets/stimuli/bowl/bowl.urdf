@@ -1,0 +1,22 @@
+<robot name="c0f57c7f98d2581c744a455c7eef0ae5">
+	<link name="_name">
+		<visual>
+			<origin xyz="4.134786037437983e-10 -0.0029806136932528857 1.1207848486569782e-09" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="models/model_normalized.obj" scale="1 1 1" />
+			</geometry>
+			<material name="texture">
+				<color rgba="1.0 1.0 1.0 1.0" />
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<mesh filename="models/model_normalized.obj" scale="1 1 1" />
+			</geometry>
+		<origin xyz="4.134786037437983e-10 -0.0029806136932528857 1.1207848486569782e-09" rpy="0 0 0" /></collision>
+		<inertial>
+			<mass value="1.0" />
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+		</inertial>
+	</link>
+</robot>

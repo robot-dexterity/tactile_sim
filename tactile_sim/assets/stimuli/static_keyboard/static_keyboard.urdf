@@ -1,0 +1,1036 @@
+<?xml version="1.0" ?>
+<robot name="circle.urdf">
+
+    <link name="world">
+		<inertial>
+			<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			<mass value="0.0"/>
+			<inertia ixx="0.0" ixy="0" ixz="0" iyy="0.0" iyz="0" izz="0.0"/>
+		</inertial>
+	</link>
+
+    <link name="keycap_A">
+      <contact>
+      	<friction_anchor/>
+      	<lateral_friction value="1.0"/>
+      </contact>
+      <inertial>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+         <mass value=".1"/>
+         <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+      </inertial>
+      <visual>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <geometry>
+            <mesh filename="individual_keys_stls/keycap_A.STL" scale="0.001 0.001 0.001" />
+        </geometry>
+         <material name="white">
+          <color rgba="1.0 1.0 1.0 1"/>
+        </material>
+      </visual>
+      <collision>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <geometry>
+            <mesh filename="individual_keys_stls/keycap_A.STL" scale="0.001 0.001 0.001" />
+        </geometry>
+      </collision>
+    </link>
+    <joint name="keycap_A_joint" type="fixed">
+        <parent link="world"/>
+        <child link="keycap_A"/>
+        <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+        <axis xyz="0.0 0.0 0.0"/>
+    </joint>
+
+  <link name="keycap_B">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_B.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_B.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_B_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_B"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="keycap_C">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_C.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_C.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_C_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_C"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="keycap_D">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_D.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_D.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_D_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_D"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="keycap_E">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_E.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_E.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_E_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_E"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="keycap_F">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_F.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_F.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_F_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_F"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="keycap_G">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_G.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_G.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_G_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_G"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="keycap_H">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_H.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_H.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_H_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_H"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="keycap_I">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_I.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_I.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_I_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_I"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="keycap_J">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_J.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_J.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_J_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_J"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="keycap_K">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_K.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_K.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_K_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_K"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="keycap_L">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_L.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_L.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_L_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_L"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="keycap_M">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_M.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_M.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_M_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_M"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="keycap_N">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_N.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_N.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_N_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_N"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="keycap_O">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_O.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_O.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_O_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_O"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="keycap_P">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_P.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_P.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_P_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_P"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="keycap_Q">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_Q.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_Q.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_Q_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_Q"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="keycap_R">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_R.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_R.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_R_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_R"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="keycap_S">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_S.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_S.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_S_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_S"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="keycap_T">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_T.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_T.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_T_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_T"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="keycap_U">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_U.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_U.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_U_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_U"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="keycap_V">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_V.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_V.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_V_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_V"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="keycap_W">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_W.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_W.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_W_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_W"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="keycap_X">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_X.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_X.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_X_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_X"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="keycap_Y">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_Y.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_Y.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_Y_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_Y"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="keycap_Z">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_Z.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_Z.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_Z_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_Z"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="keycap_SPACE">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_SPACE.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_SPACE.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_SPACE_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_SPACE"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="keycap_ARROW_UP">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_ARROW_UP.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_ARROW_UP.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_ARROW_UP_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_ARROW_UP"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="keycap_ARROW_DOWN">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_ARROW_DOWN.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_ARROW_DOWN.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_ARROW_DOWN_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_ARROW_DOWN"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="keycap_ARROW_LEFT">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_ARROW_LEFT.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_ARROW_LEFT.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_ARROW_LEFT_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_ARROW_LEFT"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="keycap_ARROW_RIGHT">
+    <contact>
+    	<friction_anchor/>
+    	<lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_ARROW_RIGHT.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+       <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <mesh filename="individual_keys_stls/keycap_ARROW_RIGHT.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="keycap_ARROW_RIGHT_joint" type="fixed">
+      <parent link="world"/>
+      <child link="keycap_ARROW_RIGHT"/>
+      <origin rpy="1.57 0.0 -1.57" xyz="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+
+
+</robot>
