@@ -34,6 +34,12 @@ cd tactile_sim
 python setup.py install
 ```
 
+Once installed, move the resulting tactile_sim directory somewhere python will search for packages. You can see suitable locations by running a python file with:
+```
+import sys
+print(sys.path)
+```
+
 
 Demonstration files are provided for in the example directory. From the base directory run
 ```
