@@ -154,6 +154,7 @@ class BaseRobotArm:
             maxNumIterations=100,
             residualThreshold=1e-8,
         )
+        joint_positions = self._process_ik_joint_positions(joint_positions)
         joint_velocities = np.array([0] * self.num_control_dofs)
 
         # set joint control
@@ -170,6 +171,10 @@ class BaseRobotArm:
 
         # set target positions for blocking move
         self._target_joints_positions = np.array(joint_positions)
+
+    def _process_ik_joint_positions(self, joint_positions):
+        """Adapt a generic IK solution to an arm's joint constraints."""
+        return np.asarray(joint_positions)
 
     def set_target_tcp_velocities(self, target_vels):
         """

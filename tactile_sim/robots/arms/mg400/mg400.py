@@ -69,6 +69,18 @@ class MG400(BaseRobotArm):
         control_joint_angles[7] = joint_angles[1] + joint_angles[2]
         return control_joint_angles
 
+    def _process_ik_joint_positions(self, joint_positions):
+        """Unwrap J1 and enforce parallel-link coupling on an IK solution."""
+        joint_positions = np.asarray(joint_positions, dtype=float).copy()
+        current_j1 = super().get_joint_angles()[0]
+        joint_positions[0] += 2 * np.pi * np.round(
+            (current_j1 - joint_positions[0]) / (2 * np.pi)
+        )
+        joint_positions[5] = joint_positions[1]
+        joint_positions[6] = -joint_positions[1]
+        joint_positions[7] = joint_positions[1] + joint_positions[2]
+        return joint_positions
+
     def get_joint_angles(self):
         """
         Return the MG400's 4 logical joints, matching the real robot interface.

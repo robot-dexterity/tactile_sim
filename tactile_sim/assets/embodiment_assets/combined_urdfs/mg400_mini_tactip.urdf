@@ -297,7 +297,7 @@
 	<joint name="j1" type="revolute">
 		<parent link="base_link"/>
 		<child link="link1"/>
-		<limit effort="0.00000" lower="-3.14000" upper="3.14000" velocity="0.00000"/>
+		<limit effort="0.00000" lower="-6.28319" upper="6.28319" velocity="0.00000"/>
 		<dynamics damping="1.0" friction="0.0001"/>
 		<origin rpy="0.00000 -0.00000 0.00000" xyz="-0.00500 0.00000 0.10900"/>
 		<axis xyz="0.00000 0.00000 1.00000"/>
