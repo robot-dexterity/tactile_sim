@@ -79,6 +79,19 @@ class MG400(BaseRobotArm):
         joint_positions[5] = joint_positions[1]
         joint_positions[6] = -joint_positions[1]
         joint_positions[7] = joint_positions[1] + joint_positions[2]
+
+        for name, joint_id, target in zip(
+            self.control_joint_names, self.control_joint_ids, joint_positions
+        ):
+            joint_info = self._pb.getJointInfo(self.embodiment_id, joint_id)
+            lower_limit, upper_limit = joint_info[8], joint_info[9]
+            if lower_limit <= upper_limit and not lower_limit <= target <= upper_limit:
+                raise ValueError(
+                    f"MG400 IK solution violates {name} limits: "
+                    f"target={target:.5f}, "
+                    f"limits=[{lower_limit:.5f}, {upper_limit:.5f}]"
+                )
+
         return joint_positions
 
     def get_joint_angles(self):

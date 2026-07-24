@@ -351,7 +351,24 @@ class BaseRobotArm:
 
         # Warn user is correct pose was not reached within max steps
         if i == max_steps-1:
-            warnings.warn("Blocking position move failed to reach tolerance within max_steps.")
+            cur_j_pos, cur_j_vel = self.get_current_joint_pos_vel()
+            joint_names = getattr(
+                self,
+                "control_joint_names",
+                [f"joint_{i}" for i in range(len(targ_j_pos))],
+            )
+            joint_errors = targ_j_pos - cur_j_pos
+            details = ", ".join(
+                f"{name}: target={target:.5f}, current={current:.5f}, "
+                f"error={error:.5f}"
+                for name, target, current, error in zip(
+                    joint_names, targ_j_pos, cur_j_pos, joint_errors
+                )
+            )
+            warnings.warn(
+                "Blocking position move failed to reach tolerance within "
+                f"max_steps. {details}"
+            )
 
     def blocking_velocity_move(
         self,

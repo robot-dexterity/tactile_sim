@@ -329,7 +329,7 @@
 	<joint name="j5" type="revolute">
 		<parent link="link4_1"/>
 		<child link="link5"/>
-		<limit effort="0.00000" lower="-3.14000" upper="3.14000" velocity="0.00000"/>
+		<limit effort="0.00000" lower="-6.28319" upper="6.28319" velocity="0.00000"/>
 		<dynamics damping="1.0" friction="0.0001"/>
 		<origin rpy="0.00000 -0.00000 0.00000" xyz="0.06600 0.01700 0.03100"/>
 		<axis xyz="-0.00001 0.00000 1.00000"/>
@@ -360,7 +360,7 @@
 	<joint name="j4_2" type="revolute">
 		<parent link="link3_2"/>
 		<child link="link4_2"/>
-		<limit effort="0.00000" lower="-3.14000" upper="3.14000" velocity="0.00000"/>
+		<limit effort="0.00000" lower="-6.28319" upper="6.28319" velocity="0.00000"/>
 		<dynamics damping="1.0" friction="0.0001"/>
 		<origin rpy="0.00000 -0.00000 0.00000" xyz="0.06790 0.00050 0.01197"/>
 		<axis xyz="0.00000 1.00000 0.00000"/>
