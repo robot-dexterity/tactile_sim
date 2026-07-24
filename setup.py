@@ -25,11 +25,11 @@ for root, dirs, files in os.walk(data_path):
             req_file = os.path.join(root, fn)
             data_files.append(req_file)
 
-setup(name='tactile_sim',
+setup(name='tactile-sim',
       version='0.0.1',
       description='Pybullet simulation of tactile data and robot arm control',
-      author='Alex Church',
-      author_email='alexhurch1993@gmail.com',
+      author='Alex Church, Nathan Lepora, and others',
+      author_email='n.lepora@bristol.ac.uk',
       license='MIT',
       packages=packages,
       package_data={'tactile_sim': data_files},

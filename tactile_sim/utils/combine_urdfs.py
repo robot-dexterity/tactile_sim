@@ -96,7 +96,7 @@ def adjust_materials(urdf_path):
     # create temp file to copy into
     temp_fh, temp_path = mkstemp()
 
-    path_str = "/data_drive/alexc/DexterousRobotics/tactile_sim/tactile_sim/assets"
+    path_str = add_assets_path("")
     mat_str = "<material name=\"mat_"
     mat_counter = 0
 
@@ -144,7 +144,7 @@ def adjust_all_materials(base_dir):
 
 if __name__ == '__main__':
 
-    # adjust_all_materials("/home/alex/DexterousRobotics/tactile_sim/tactile_sim/assets/embodiment_assets/combined_urdfs")
+    # adjust_all_materials(add_assets_path(os.path.join("embodiment_assets", "combined_urdfs")))
 
     save_urdf = True
 

@@ -29,8 +29,8 @@ This repo contains code for the simulation of various robot arms with tactile se
 This repo has only been developed and tested with Ubuntu 18.04 and python 3.8.
 
 ```console
-git clone https://github.com/dexterousrobot/tactile_sim
-cd tactile_sim
+git clone https://github.com/robot-dexterity/tactile-sim
+cd tactile-sim
 python setup.py install
 ```
 
